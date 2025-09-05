@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 import sys
 
 
@@ -6,7 +7,7 @@ def main():
     argv = sys.argv[1:]
     count = len(argv)
     if count == 0:
-        print("Number of argument(s).")
+        print("0 arguments.")
     elif count == 1:
         print("1 argument:")
     else:
