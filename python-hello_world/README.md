@@ -15,19 +15,28 @@ You'll soon find that with Python (and the majority of higher level languages), 
 
 Python has a linter / style guide, called PEP8, also now known as PyCode. At Holberton, we won't start off with using PyCode, because it's much more strict compared to PEP8. Don't worry if you see a warning when you are running PEP8, you can ignore it.
 
-Enjoy!  
+Enjoy!
 — Guillaume
 
 ---
+
+## Resources
+
+- [Learn to Program](https://www.youtube.com/playlist?list=PLGLfVvz_LVvTn3cK5e6LjhgGiSeVlIRwt)
+- [Whetting Your Appetite](https://docs.python.org/3/tutorial/appetite.html)
+- [Using the Python Interpreter](https://docs.python.org/3/tutorial/interpreter.html)
+- [An Informal Introduction to Python](https://docs.python.org/3/tutorial/introduction.html)
+- [How To Use String Formatters in Python 3](https://realpython.com/python-f-strings/)
+- [Pycodestyle – Style Guide for Python Code](https://pypi.org/project/pycodestyle/)
 
 ## 🎯 Learning Objectives
 
 By the end of this project, you should be able to explain the following concepts without relying on Google:
 
-- How to use the Python interpreter  
-- How to print text and variables using `print`  
-- How to use strings  
-- What are indexing and slicing in Python  
+- How to use the Python interpreter
+- How to print text and variables using `print`
+- How to use strings
+- What are indexing and slicing in Python
 - What is the official Python coding style and how to check your code with `pycodestyle`
 
 ---
@@ -36,13 +45,13 @@ By the end of this project, you should be able to explain the following concepts
 
 ### Python Scripts
 
-- ✅ Allowed editors: `vi`, `vim`, `emacs`  
-- ✅ All files will be interpreted/compiled on **Ubuntu 20.04 LTS** using **Python 3.8.\***  
-- ✅ All files must end with a new line  
-- ✅ The first line of all files must be exactly: `#!/usr/bin/python3`  
-- ✅ A `README.md` file at the root of the repo is mandatory  
-- ✅ Your code must follow `pycodestyle` (version 2.7.\*)  
-- ✅ All files must be executable  
+- ✅ Allowed editors: `vi`, `vim`, `emacs`
+- ✅ All files will be interpreted/compiled on **Ubuntu 20.04 LTS** using **Python 3.8.\***
+- ✅ All files must end with a new line
+- ✅ The first line of all files must be exactly: `#!/usr/bin/python3`
+- ✅ A `README.md` file at the root of the repo is mandatory
+- ✅ Your code must follow `pycodestyle` (version 2.7.\*)
+- ✅ All files must be executable
 - ✅ File length will be tested using `wc`
 
 ---
