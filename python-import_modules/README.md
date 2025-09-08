@@ -5,6 +5,12 @@
 
 # 🐍 Python Import & Modules
 
+## Resources
+
+- [Modules](https://docs.python.org/3/tutorial/modules.html)
+- [Command line arguments](https://docs.python.org/3/tutorial/stdlib.html#command-line-arguments)
+- [Pycodestyle – Style Guide for Python Code](https://pypi.org/project/pycodestyle/)
+
 ## 🎯 Learning Objectives
 
 At the end of this project, you should be able to explain the following concepts without using Google:
