@@ -9,7 +9,7 @@ def best_score(a_dictionary):
 
     for key in a_dictionary:
         if best_value is None or a_dictionary[key] > best_value:
-	        best_value = a_dictionary[key]
-	        best_key = key
+            best_value = a_dictionary[key]
+            best_key = key
 
     return best_key
