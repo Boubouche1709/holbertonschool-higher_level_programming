@@ -13,7 +13,7 @@ def add_integer(a, b=98):
         b (int | float, optional): The second number, defaults to 98
 
     Returns:
-        int: The addition of a and b, both casted to integers if they are floats.
+        int: The addition of a and b, both casted to integers if they are float
 
     Raises:
         TypeError: If a or b is not an integer or a float.
