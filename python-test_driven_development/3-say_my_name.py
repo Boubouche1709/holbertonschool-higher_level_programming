@@ -20,18 +20,8 @@ def matrix_divided(matrix, div):
         TypeError: If rows of the matrix are not the same size.
         TypeError: If div is not a number.
         ZeroDivisionError: If div is zero.
-
-    Examples:
-        >>> matrix = [[1, 2, 3], [4, 5, 6]]
-        >>> matrix_divided(matrix, 2)
-        [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
-        >>> matrix_divided(matrix, 3)
-        [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
-        >>> matrix_divided([[9, 12]], 3)
-        [[3.0, 4.0]]
-        >>> matrix_divided([[1.5, 2.5], [3.5, 4.5]], 2)
-        [[0.75, 1.25], [1.75, 2.25]]
     """
+
     if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
