@@ -1,41 +1,23 @@
 #!/usr/bin/python3
 """
-This module provides a function to divide all elements of a matrix by a given number.
-It validates the matrix structure and ensures all elements are numbers.
+This module provides a function to print a formatted name using first and last name.
+It ensures that both inputs are strings and raises appropriate errors otherwise.
 """
 
-def matrix_divided(matrix, div):
+def say_my_name(first_name, last_name=""):
     """
-    Divides all elements of a matrix by a given number and returns a new matrix.
+    Prints a formatted string with the user's full name.
 
     Args:
-        matrix (list of lists): A matrix of integers or floats.
-        div (int or float): The number to divide each element by.
-
-    Returns:
-        list of lists: A new matrix with each element divided and rounded to 2 decimal places.
+        first_name (str): The first name of the user.
+        last_name (str, optional): The last name of the user. Defaults to "".
 
     Raises:
-        TypeError: If matrix is not a list of lists of integers/floats.
-        TypeError: If rows of the matrix are not the same size.
-        TypeError: If div is not a number.
-        ZeroDivisionError: If div is zero.
+        TypeError: If first_name or last_name is not a string.
+
     """
-
-    if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-
-    if not all(isinstance(num, (int, float)) for row in matrix for num in row):
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-
-    row_length = len(matrix[0])
-    if not all(len(row) == row_length for row in matrix):
-        raise TypeError("Each row of the matrix must have the same size")
-
-    if not isinstance(div, (int, float)):
-        raise TypeError("div must be a number")
-
-    if div == 0:
-        raise ZeroDivisionError("division by zero")
-
-    return [[round(num / div, 2) for num in row] for row in matrix]
+    if not isinstance(first_name, str):
+        raise TypeError("first_name must be a string")
+    if not isinstance(last_name, str):
+        raise TypeError("last_name must be a string")
+    print(f"My name is {first_name} {last_name}")
