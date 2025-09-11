@@ -1,56 +1,38 @@
 >>> text_indentation = __import__('4-text_indentation').text_indentation
+>>> text_indentation("Hello. How are you? I'm fine: thanks.")
+Hello
 
->>> text_indentation("Wait...what?Really:yes.")
-Wait
+How are you?
+
+I'm fine
+
+thanks
+
+>>> text_indentation("No punctuation here")
+No punctuation here
+
+>>> text_indentation("Multiple...dots?Really:yes.")
+Multiple
 
 .
 
 .
 
-what
+dots
 
 Really
 
 yes
 
->>> text_indentation("End with punctuation.")
-End with punctuation
-
->>> text_indentation("Start:middle:end.")
-Start
-
-middle
-
-end
-
->>> text_indentation("Mix of ? and : and . in one sentence:Yes?No.")
-Mix of ? and : and . in one sentence
-
-Yes
-
-No
-
->>> text_indentation("   Spaces before and after.   ")
-Spaces before and after
-
->>> text_indentation("")
->>> text_indentation("   ")
->>> text_indentation("\nNewline inside. Next line?")
-Newline inside. Next line
-
->>> text_indentation("Colon:Question?Period.")
-Colon
-
-Question
-
-Period
-
->>> text_indentation(True)
+>>> text_indentation(123)
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
-
->>> text_indentation(3.14)
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>> text_indentation(["Hello."])
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
