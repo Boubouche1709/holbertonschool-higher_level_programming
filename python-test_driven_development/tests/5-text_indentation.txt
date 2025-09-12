@@ -1,38 +1,85 @@
 >>> text_indentation = __import__('4-text_indentation').text_indentation
->>> text_indentation("Hello. How are you? I'm fine: thanks.")
-Hello
+
+# Basic case with different punctuation marks
+>>> text_indentation("Hello. How are you? I am fine: thanks.")
+Hello.
 
 How are you?
 
-I'm fine
+I am fine:
 
-thanks
+thanks.
 
+# No punctuation at all
 >>> text_indentation("No punctuation here")
 No punctuation here
 
->>> text_indentation("Multiple...dots?Really:yes.")
-Multiple
+# Punctuation without spaces
+>>> text_indentation("Hello.How are you?Yes:ok.")
+Hello.
+
+How are you?
+
+Yes:
+
+ok.
+
+# Punctuation with multiple spaces after
+>>> text_indentation("Hello.     How are you?      Fine:   ok.")
+Hello.
+
+How are you?
+
+Fine:
+
+ok.
+
+# Multiple punctuation marks in a row
+>>> text_indentation("Wait... What?? Really::Yes.")
+Wait.
 
 .
 
 .
 
-dots
+What?
 
-Really
+?
 
-yes
+Really:
 
+Yes.
+
+# Text with spaces at the beginning and the end
+>>> text_indentation("   Trim me please.   End   ")
+Trim me please.
+
+End
+
+# Empty string
+>>> text_indentation("")
+<BLANKLINE>
+
+# String with only punctuation marks
+>>> text_indentation("..??::")
+.
+
+.
+
+?
+
+?
+
+:
+
+:
+
+# String starting with a digit
+>>> text_indentation("3Welcome Holberton School")
+3Welcome Holberton School
+
+# Error when argument is not a string
 >>> text_indentation(123)
 Traceback (most recent call last):
-...
-TypeError: text must be a string
->>> text_indentation(None)
-Traceback (most recent call last):
-...
-TypeError: text must be a string
->>> text_indentation(["Hello."])
-Traceback (most recent call last):
-...
+    ...
 TypeError: text must be a string
