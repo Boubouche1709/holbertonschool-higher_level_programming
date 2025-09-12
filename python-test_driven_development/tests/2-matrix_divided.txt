@@ -28,3 +28,17 @@ TypeError: div must be a number
 Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
+
+>>> matrix_divided([[2, 4], [6, 8]], 0.5)
+[[4.0, 8.0], [12.0, 16.0]]
+>>> matrix_divided([[-1, -2], [-3, -4]], 2)
+[[-0.5, -1.0], [-1.5, -2.0]]
+
+>>> matrix_divided([[1, None], [3, 4]], 2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([[2, 4]], False)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
