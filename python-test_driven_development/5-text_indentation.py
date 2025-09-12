@@ -5,6 +5,7 @@ after each '.', '?' or ':' character. It also removes leading and trailing
 spaces from each printed line.
 """
 
+
 def text_indentation(text):
     """
     Prints a formatted version of the input text with two new lines after
@@ -18,16 +19,25 @@ def text_indentation(text):
         TypeError: If text is not a string.
 
     """
+
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    special_chars = ['.', '?', ':']
-    buffer = ""
-    for char in text:
-        buffer += char
-        if char in special_chars:
-            print(buffer.strip())
-            print()
-            buffer = ""
-    if buffer.strip():
-        print(buffer.strip())
+    i = 0
+    length = len(text)
+    while i < length:
+        ch = text[i]
+        # Normal character
+        if ch not in ".?:":
+            print(ch, end="")
+            i += 1
+            continue
+
+        # If it's punctuation
+        print(ch, end="")
+        print("\n")
+        i += 1
+
+        # Skip spaces right after punctuation
+        while i < length and text[i] == " ":
+            i += 1
