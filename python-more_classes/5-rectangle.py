@@ -9,7 +9,6 @@ class Rectangle:
     This class currently does not implement any attributes or methods.
     It serves as a placeholder or base for future rectangle-related logic.
     """
-    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -59,4 +58,3 @@ class Rectangle:
 
     def __del__(self):
         print("Bye rectangle...")
-        Rectangle.number_of_instances -= 1
