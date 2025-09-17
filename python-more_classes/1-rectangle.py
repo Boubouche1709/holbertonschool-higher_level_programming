@@ -7,7 +7,6 @@ class Rectangle:
     This class currently does not implement any attributes or methods.
     It serves as a placeholder or base for future rectangle-related logic.
     """
-
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -30,8 +29,8 @@ class Rectangle:
 
     @height.setter
     def height(self, value)
-    if not isinstance(value, int):
-        raise TypeError("height must be an integer")
-    if value < 0:
-        raise ValueError("height must be >= 0")
-    self.__height = value
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
