@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""This module provides a function to list attributes and methods of an object."""
+"""This module is a function to list attributes and methods of an object."""
+
 
 def lookup(obj):
-    """Return the list of available attributes and methods of the given object."""
+    """Return the list of available attributes and methods of object."""
     return dir(obj)
