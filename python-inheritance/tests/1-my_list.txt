@@ -3,7 +3,47 @@
 >>> my_list.print_sorted()
 [1, 2, 5, 9]
 
->>> print(my_list)
+>>> print(my_list)>>> from my_list import MyList
+
+# Test avec une liste vide
+>>> empty = MyList([])
+>>> empty.print_sorted()
+[]
+
+# Test avec des entiers négatifs
+>>> negatives = MyList([-3, -1, -7, -2])
+>>> negatives.print_sorted()
+[-7, -3, -2, -1]
+
+# Test avec des doublons
+>>> duplicates = MyList([4, 2, 4, 1, 2])
+>>> duplicates.print_sorted()
+[1, 2, 2, 4, 4]
+
+# Test avec une liste déjà triée
+>>> sorted_list = MyList([1, 2, 3, 4])
+>>> sorted_list.print_sorted()
+[1, 2, 3, 4]
+
+# Test avec une liste en ordre décroissant
+>>> reverse = MyList([9, 7, 5, 3])
+>>> reverse.print_sorted()
+[3, 5, 7, 9]
+
+# Vérification que la liste originale n’est pas modifiée
+>>> reverse
+[9, 7, 5, 3]
+
+# Test avec un seul élément
+>>> single = MyList([42])
+>>> single.print_sorted()
+[42]
+
+# Test avec tous les éléments identiques
+>>> same = MyList([5, 5, 5])
+>>> same.print_sorted()
+[5, 5, 5]
+
 [5, 2, 9, 1]
 
 >>> isinstance(my_list, list)
