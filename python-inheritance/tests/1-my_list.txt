@@ -1,68 +1,65 @@
->>> Mylist = __import__('1-my_list').my_list
+    >>> MyList = __import__('1-my_list').MyList
 
-# --- Basic test with integers ---
->>> numbers = MyList([5, 2, 9, 1])
->>> numbers.print_sorted()
-[1, 2, 5, 9]
->>> numbers  # original list is not modified
-[5, 2, 9, 1]
+Test basic functionality:
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
 
-# --- Empty list ---
->>> empty = MyList([])
->>> empty.print_sorted()
-[]
+Test with empty list:
+    >>> empty_list = MyList()
+    >>> empty_list.print_sorted()
+    []
 
-# --- Negative integers ---
->>> negatives = MyList([-3, -1, -7, -2])
->>> negatives.print_sorted()
-[-7, -3, -2, -1]
+Test with single element:
+    >>> single_list = MyList()
+    >>> single_list.append(42)
+    >>> single_list.print_sorted()
+    [42]
 
-# --- Duplicates ---
->>> duplicates = MyList([4, 2, 4, 1, 2])
->>> duplicates.print_sorted()
-[1, 2, 2, 4, 4]
+Test with negative numbers:
+    >>> neg_list = MyList()
+    >>> neg_list.append(-5)
+    >>> neg_list.append(3)
+    >>> neg_list.append(-1)
+    >>> neg_list.append(0)
+    >>> neg_list.print_sorted()
+    [-5, -1, 0, 3]
 
-# --- Already sorted list ---
->>> already_sorted = MyList([1, 2, 3, 4])
->>> already_sorted.print_sorted()
-[1, 2, 3, 4]
+Test with duplicate numbers:
+    >>> dup_list = MyList()
+    >>> dup_list.append(3)
+    >>> dup_list.append(1)
+    >>> dup_list.append(3)
+    >>> dup_list.append(2)
+    >>> dup_list.append(1)
+    >>> dup_list.print_sorted()
+    [1, 1, 2, 3, 3]
 
-# --- Reverse order list ---
->>> reverse = MyList([9, 7, 5, 3])
->>> reverse.print_sorted()
-[3, 5, 7, 9]
->>> reverse  # original list remains unchanged
-[9, 7, 5, 3]
+Test inheritance - MyList should be instance of list:
+    >>> my_list = MyList()
+    >>> isinstance(my_list, list)
+    True
 
-# --- Single element ---
->>> single = MyList([42])
->>> single.print_sorted()
-[42]
+Test that print_sorted doesn't modify original list:
+    >>> test_list = MyList([5, 1, 3, 2, 4])
+    >>> original = test_list.copy()
+    >>> test_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> test_list == original
+    True
 
-# --- All identical elements ---
->>> same = MyList([5, 5, 5])
->>> same.print_sorted()
-[5, 5, 5]
-
-# --- Floats ---
->>> floats = MyList([3.2, 1.5, 4.8, 2.1])
->>> floats.print_sorted()
-[1.5, 2.1, 3.2, 4.8]
-
-# --- Mixed integers and floats ---
->>> mixed = MyList([3, 1.2, 5, 2.5])
->>> mixed.print_sorted()
-[1.2, 2.5, 3, 5]
-
-# --- Strings ---
->>> words = MyList(["banana", "apple", "cherry"])
->>> words.print_sorted()
-['apple', 'banana', 'cherry']
-
-# --- General checks ---
->>> isinstance(numbers, list)
-True
->>> issubclass(MyList, list)
-True
->>> hasattr(numbers, "print_sorted")
-True
+Test with constructor initialization:
+    >>> init_list = MyList([9, 2, 7, 1])
+    >>> init_list.print_sorted()
+    [1, 2, 7, 9]
+    >>> print(init_list)
+    [9, 2, 7, 1]
