@@ -1,6 +1,8 @@
-# Python - Input/Output
+# 🐍Python - Input/Output
 
-<div align="center"><img src="https://github.com/ksyv/holbertonschool-web_front_end/blob/main/baniere_holberton.png"></div>
+<p align="center">
+   <img src="https://github.com/user-attachments/assets/7d564981-cb81-43e7-819a-25ffcfc5bd72" width=40% height=40%/>
+</p>
 
 ---
 ## 📁 Project: Python - Input/Output
@@ -9,13 +11,15 @@ This directory contains Python scripts that explore file operations (read/write)
 
 ---
 
-## 📚 Table of Contents
+## 📚 Ressources
 
-* [Description](#description)
-* [Learning Objectives](#learning-objectives)
-* [Requirements](#requirements)
-* [Tasks](#tasks)
-* [Author](#author)
+* [7.2. Reading and Writing Files](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files)
+* [8.7. Predefined Clean-up Actions](https://docs.python.org/3/tutorial/errors.html#predefined-clean-up-actions)
+* [Dive Into Python 3: Chapter 11. Files](https://histo.ucsf.edu/BMS270/diveintopython3-r802.pdf)
+* [JSON encoder and decoder](https://docs.python.org/3/library/json.html)
+* [Learn to Program 8 : Reading / Writing Files](https://www.youtube.com/watch?v=EukxMIsNeqU)
+* [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
+* [sys package](https://docs.python.org/3/library/sys.html)
 
 ---
 
