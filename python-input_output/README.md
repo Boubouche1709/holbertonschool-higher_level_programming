@@ -1,11 +1,9 @@
-# 🐍Python - Input/Output
-
 <p align="center">
    <img src="https://github.com/user-attachments/assets/7d564981-cb81-43e7-819a-25ffcfc5bd72" width=40% height=40%/>
 </p>
 
 ---
-## 📁 Project: Python - Input/Output
+## 🐍Python - Input/Output
 
 This directory contains Python scripts that explore file operations (read/write), serialization (JSON), deserialization, and command-line argument parsing. The project follows Holberton School's curriculum and demonstrates fundamental I/O manipulation using Python.
 
