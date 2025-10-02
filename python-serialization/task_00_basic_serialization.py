@@ -2,6 +2,7 @@
 
 import json
 
+
 def serialize_and_save_to_file(data, filename):
     """
     Serialize a Python dictionary into JSON and save it to a file.
@@ -11,7 +12,8 @@ def serialize_and_save_to_file(data, filename):
         filename (str): Path to the output JSON file. Overwrites if exists.
     """
     with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f , indent=4)
+        json.dump(data, f, indent=4)
+
 
 def load_and_deserialize(filename):
     """
