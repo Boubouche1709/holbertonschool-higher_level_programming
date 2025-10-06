@@ -32,6 +32,7 @@ Developing a solid understanding of how to consume, develop, secure, and documen
 
 ## REST API Conceptual Diagram:
 
+```
 +-------+           +-------+           +---------+           +---------+
 |       |  Request  |       |  Process  |         |  Fetch/   |         |
 |       |   ----->  |       |  -------> |         |  Modify   |         |
@@ -40,6 +41,7 @@ Developing a solid understanding of how to consume, develop, secure, and documen
 |       |  Response |       |  Return   |         |           |         |
 +-------+           +-------+           +---------+           +---------+
   Client            Web Server           API Server           Database
+```
 
 ### Components:
 
