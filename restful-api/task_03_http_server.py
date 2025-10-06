@@ -11,7 +11,7 @@ class simplehandler(BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write(b"Hello, this is a simple API!!")
+            self.wfile.write(b"Hello, this is a simple API!")
 
         elif self.path == "/data":
             data = {
@@ -44,7 +44,7 @@ class simplehandler(BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write(b"404 Not Found: Endpoint not found.")
+            self.wfile.write(b"404 Not Found: Endpoint not found")
 
 def run(server_class=HTTPServer, handler_class=simplehandler):
     server_address = ('', 8000)
