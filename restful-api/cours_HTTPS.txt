@@ -1,0 +1,165 @@
+
+============================================================
+COURS RÉSUMÉ — HTTP, HTTPS ET API REST
+============================================================
+
+1. INTRODUCTION AUX API
+------------------------------------------------------------
+Une **API (Application Programming Interface)** est un ensemble de règles
+qui permettent à deux applications de communiquer entre elles.
+
+Les APIs RESTful sont les plus courantes. REST signifie
+**Representational State Transfer**. C’est un style d’architecture
+qui repose sur le protocole HTTP et favorise la simplicité,
+la scalabilité et l’indépendance entre client et serveur.
+
+Les API REST utilisent des **méthodes HTTP** comme :
+- GET : Récupérer une ressource
+- POST : Créer une ressource
+- PUT : Mettre à jour une ressource existante
+- DELETE : Supprimer une ressource
+
+------------------------------------------------------------
+2. PROTOCOLE HTTP — PRINCIPES DE BASE
+------------------------------------------------------------
+Le **protocole HTTP (HyperText Transfer Protocol)** est la base du Web.
+Il régit la communication entre le client (navigateur, script, application)
+et le serveur (hébergeant les ressources).
+
+Chaque requête HTTP contient :
+- une méthode (GET, POST, etc.)
+- une URL (ex. /users/1)
+- des en-têtes (headers)
+- un corps (body, pour les méthodes POST ou PUT)
+
+Le serveur renvoie une **réponse HTTP** composée :
+- d’un code d’état (status code)
+- d’en-têtes (headers)
+- éventuellement d’un corps (body, souvent au format JSON)
+
+------------------------------------------------------------
+3. CODES D’ÉTAT HTTP
+------------------------------------------------------------
+Les codes d’état HTTP indiquent le résultat du traitement
+de la requête. Ils sont classés par catégories :
+
+1xx — Information
+    Ex. 100 Continue : le serveur a bien reçu la requête partielle
+
+2xx — Succès
+    200 OK : la requête a réussi
+    201 Created : la ressource a été créée
+    204 No Content : requête traitée, pas de contenu à renvoyer
+
+3xx — Redirection
+    301 Moved Permanently : la ressource a changé d’adresse
+    302 Found : redirection temporaire
+    304 Not Modified : la ressource n’a pas changé (cache)
+
+4xx — Erreur du client
+    400 Bad Request : requête invalide
+    401 Unauthorized : authentification requise
+    403 Forbidden : accès interdit
+    404 Not Found : ressource non trouvée
+    405 Method Not Allowed : méthode HTTP non autorisée
+
+5xx — Erreur du serveur
+    500 Internal Server Error : erreur interne
+    502 Bad Gateway : réponse invalide du serveur amont
+    503 Service Unavailable : serveur temporairement indisponible
+    504 Gateway Timeout : délai d’attente dépassé
+
+------------------------------------------------------------
+4. HTTP vs HTTPS
+------------------------------------------------------------
+HTTP envoie les données **en clair**, sans chiffrement. Cela rend les
+communications vulnérables aux interceptions ("man-in-the-middle").
+
+**HTTPS (HyperText Transfer Protocol Secure)** ajoute une couche
+de sécurité grâce au protocole **TLS (Transport Layer Security)**.
+
+Les avantages de HTTPS :
+- Chiffrement : les données sont illisibles si interceptées.
+- Intégrité : on détecte toute modification du contenu.
+- Authentification : le certificat SSL/TLS garantit l’identité du serveur.
+
+Les certificats sont délivrés par des **autorités de certification (CA)**,
+qui valident l’identité du site web.
+
+------------------------------------------------------------
+5. CONSUMMATION DES API (UTILISATION)
+------------------------------------------------------------
+On peut consommer des APIs de plusieurs manières :
+- **Ligne de commande** : avec `curl`, `httpie`, ou `wget`
+- **Python** : via les modules `requests` ou `http.client`
+
+Exemple en Python :
+------------------------------------------------------------
+import requests
+
+response = requests.get("https://api.example.com/users")
+if response.status_code == 200:
+    print(response.json())
+------------------------------------------------------------
+
+------------------------------------------------------------
+6. DÉVELOPPEMENT D’API EN PYTHON
+------------------------------------------------------------
+- **Avec http.server** : créer une API simple avec le module standard.
+- **Avec Flask** : framework léger pour créer des APIs REST.
+  Exemple :
+------------------------------------------------------------
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+@app.route('/api/hello', methods=['GET'])
+def hello():
+    return jsonify({'message': 'Bonjour API !'})
+
+if __name__ == '__main__':
+    app.run(debug=True)
+------------------------------------------------------------
+
+------------------------------------------------------------
+7. SÉCURITÉ DES API
+------------------------------------------------------------
+Les bonnes pratiques :
+- Utiliser **HTTPS** pour toutes les communications.
+- Mettre en place des **tokens d’authentification** (ex. JWT).
+- Limiter les accès avec des **clés API**.
+- Valider et filtrer toutes les entrées utilisateur.
+- Gérer les erreurs avec des **codes d’état appropriés**.
+
+------------------------------------------------------------
+8. DOCUMENTATION DES API — OpenAPI / Swagger
+------------------------------------------------------------
+La **documentation d’une API** permet aux développeurs
+de comprendre comment interagir avec elle.
+
+**OpenAPI (Swagger)** est une norme pour décrire une API REST :
+- Liste les endpoints disponibles.
+- Décrit les paramètres, les types de données, les codes de réponse.
+- Génère automatiquement une interface interactive pour les tests.
+
+------------------------------------------------------------
+9. IMPORTANCE DES API
+------------------------------------------------------------
+Les API permettent aux systèmes et applications d’interagir.
+Elles sont essentielles pour :
+- Connecter des services web (ex. Google Maps, Facebook, PayPal)
+- Permettre aux développeurs d’intégrer facilement des fonctionnalités
+- Favoriser la modularité et la réutilisation du code
+
+------------------------------------------------------------
+SOURCES PRINCIPALES
+------------------------------------------------------------
+- Mozilla Developer Network (MDN) : Guide HTTP
+- IBM Docs : REST APIs Overview
+- Cloudflare : Pourquoi HTTP n’est pas sécurisé
+- Wikipedia : Liste des codes HTTP
+- Salesforce : Définition et rôle des APIs
+
+============================================================
+FIN DU COURS
+============================================================
