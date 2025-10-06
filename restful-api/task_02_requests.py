@@ -28,12 +28,13 @@ def fetch_and_save_posts():
                 "title": post["title"],
                 "body": post["body"]
             }
-            for post in posts]
+            for post in posts
+        ]
 
-    with open("post.csv", "w", newline="", encoding="utf-8") as csvfile:
-        fieldnames = ["id", "title", "body"]
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        with open("post.csv", "w", newline="", encoding="utf-8") as csvfile:
+            fieldnames = ["id", "title", "body"]
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-        writer.writeheader()
-        for post in structure_posts:
-            writer.writerow(post)
+            writer.writeheader()
+            for post in structure_posts:
+                writer.writerow(post)
