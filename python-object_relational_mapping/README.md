@@ -35,7 +35,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - [Introduction to SQLAlchemy](https://www.youtube.com/watch?v=woKYyhLCcnU)
 - [Flask SQLAlchemy](https://www.youtube.com/playlist?list=PLXmMXHVSvS-BlLA5beNJojJLlpE0PJgCW)
 - [10 common stumbling blocks for SQLAlchemy newbies](https://alextechrants.blogspot.com/2013/11/10-common-stumbling-blocks-for.html)
-- [Python SQLAlchemy Cheatsheet](https://www.pythonsheets.com/notes/python-sqlalchemy.html)
+- [Python SQLAlchemy Cheatsheet](https://www.pythonsheets.com/notes/database/python-sqlalchemy.html)
 - [SQLAlchemy ORM Tutorial for Python Developers(Warning: This tutorial is with PostgreSQL, but the concept of SQLAlchemy is the same with MySQL)](https://auth0.com/blog/sqlalchemy-orm-tutorial-for-python-developers/)
 - [SQLAlchemy Tutorial](https://overiq.com/sqlalchemy-101/)
 
