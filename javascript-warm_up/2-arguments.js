@@ -1,10 +1,10 @@
 #!/usr/bin/node
-const Arguments = process.argv.length - 2;
+const args = process.argv.slice(2);
 // -2 for node exec and script path
 
-if (Arguments === 0) {
+if (args.length === 0) {
   console.log('No argument');
-} else if (Arguments === 1) {
+} else if (args.length === 1) {
   console.log('Argument found');
 } else {
   console.log('Arguments found');
