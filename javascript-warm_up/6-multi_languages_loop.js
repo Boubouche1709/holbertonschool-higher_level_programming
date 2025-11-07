@@ -4,4 +4,5 @@ let index = 0;
 
 while (index < sentences.length) {
 	console.log(sentences[index]);
+    index++;
 }
