@@ -4,5 +4,5 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(data => {
       const helloElem = document.querySelector('#hello');
       helloElem.textContent = data.hello;
-  })
+    });
 });
